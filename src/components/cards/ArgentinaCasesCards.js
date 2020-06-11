@@ -3,7 +3,7 @@ import {Col, Container, Row} from "react-bootstrap";
 import CardIndicator from "../shared/card/CardIndicator";
 import {ArgentinaData} from "../../data/extra-data";
 
-export default class ArCasesCards extends React.Component {
+export default class ArgentinaCasesCards extends React.Component {
 
     constructor(props) {
         super(props);

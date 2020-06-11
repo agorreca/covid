@@ -15,9 +15,7 @@ export default class NavHeader extends React.Component {
                         <div className={'left-section'}>
                             <div className={'logo-container'}>
                                 <h1 className={'title'}><a href={'https://tomifor.github.io/covid/'}>Covid-19</a></h1>
-                                <h2 className={'subtitle'}><a href={'https://goo.gl/maps/3fTbwqhnmosFQ3VG8'}
-                                                              target={'_blank'}
-                                                              rel="noopener noreferrer">San Miguel</a></h2>
+                                <h2 className={'subtitle'}></h2>
                             </div>
                             <div className={'nav-alert'}>
                                 <EmergencyAlert/>

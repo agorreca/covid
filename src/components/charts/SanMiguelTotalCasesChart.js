@@ -1,12 +1,12 @@
 import React from "react";
 import {VictoryLine, VictoryChart, VictoryAxis} from 'victory';
-import {DATA} from "../../data/data";
+import {SanMiguelData} from "../../data/san-miguel-data";
 import ChartContainer from "./ChartContainer";
 
-export default class SmTotalCasesChart extends React.Component {
+export default class SanMiguelTotalCasesChart extends React.Component {
     constructor(props) {
         super(props);
-        const values = DATA.map(item => ({x: new Date(Date.parse(item.date)), y: item.cases.total})).reverse();
+        const values = SanMiguelData.map(item => ({x: new Date(Date.parse(item.date)), y: item.cases.total})).reverse();
         const maxValue = Math.max.apply(Math, values.map((o) => {
             return o.y;
         }));

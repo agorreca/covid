@@ -1,14 +1,14 @@
 import React from "react";
 import {VictoryPie, VictoryChart, VictoryLegend, VictoryAxis} from "victory";
-import {DATA} from "../../data/data";
+import {SanMiguelData} from "../../data/san-miguel-data";
 import ChartContainer from "./ChartContainer";
 
 
-export default class SmConfirmedChart extends React.Component {
+export default class SanMiguelConfirmedChart extends React.Component {
 
     constructor(props) {
         super(props);
-        const last = DATA[0];
+        const last = SanMiguelData[0];
         this.state = {
             total: last.cases.total,
             colors: ["#3DB085", "#30A0DB", "#FBCF4A", "#844F9B", "#E95B54"],

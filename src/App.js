@@ -3,11 +3,12 @@ import './App.scss';
 import NavHeader from "./components/nav/nav";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/footer/footer";
-import SmTab from "./components/tabs/SmTab";
+import SanMiguelTab from "./components/tabs/SanMiguelTab";
+import TigreTab from "./components/tabs/TigreTab";
 import {useTheme} from "./theme/ThemeContext";
 import styled from "@emotion/styled";
 import {Tab, Nav} from "react-bootstrap";
-import ArTab from "./components/tabs/ArTab";
+import ArgentinaTab from "./components/tabs/ArgentinaTab";
 import EmergencyAlert from "./components/shared/alert/EmergencyAlert";
 
 
@@ -27,18 +28,24 @@ const App = () => {
                     <Tab.Container defaultActiveKey="city">
                         <Nav variant="pills" className="flex-row">
                             <Nav.Item>
-                                <Nav.Link eventKey="city">San Miguel</Nav.Link>
+                                <Nav.Link eventKey="tigre">Tigre</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="san-miguel">San Miguel</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link eventKey="country">Argentina</Nav.Link>
                             </Nav.Item>
                         </Nav>
                         <Tab.Content>
-                            <Tab.Pane eventKey="city">
-                                <SmTab/>
+                            <Tab.Pane eventKey="tigre">
+                                <TigreTab/>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="san-miguel">
+                                <SanMiguelTab/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="country">
-                                <ArTab/>
+                                <ArgentinaTab/>
                             </Tab.Pane>
                         </Tab.Content>
                     </Tab.Container>

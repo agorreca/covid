@@ -1,14 +1,14 @@
 import React from "react";
 import {VictoryAxis, VictoryBar, VictoryChart} from 'victory';
-import {DATA} from "../../data/data";
+import {SanMiguelData} from "../../data/san-miguel-data";
 import ChartContainer from "./ChartContainer";
 
 
-export default class SmDayCases extends React.Component {
+export default class SanMiguelDayCases extends React.Component {
 
     constructor(props) {
         super(props);
-        const values = DATA.map(item => ({
+        const values = SanMiguelData.map(item => ({
             x: new Date(Date.parse(item.date)).getTime(),
             y: item.cases.newCases
         })).reverse();

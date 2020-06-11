@@ -1,10 +1,10 @@
 import React from "react";
-import {DATA} from "../../data/data";
-import SmCharts from "../charts/SmCharts";
-import SmTestCards from "../cards/SmTestCards";
-import SmCasesCards from "../cards/SmCasesCards";
+import {TigreData} from "../../data/tigre-data";
+import TigreCharts from "../charts/TigreCharts";
+import TigreTestCards from "../cards/TigreTestCards";
+import TigreCasesCards from "../cards/TigreCasesCards";
 
-export default class SmTab extends React.Component {
+export default class TigreTab extends React.Component {
 
     constructor(props) {
         super(props);
@@ -17,7 +17,7 @@ export default class SmTab extends React.Component {
     }
 
     getDateFormatted() {
-        const date = DATA[0].date.split('T')[0].split('-');
+        const date = TigreData[0].date.split('T')[0].split('-');
         const year = date[0];
         const month = date[1]
         const day = date[2];
@@ -26,21 +26,21 @@ export default class SmTab extends React.Component {
 
     render() {
         const {lastUpdate} = this.state;
-        const sourceLabel = 'Municipalidad de San Miguel';
-        const sourceUrl = 'https://www.msm.gov.ar/prensa/informe-covid-san-miguel/'
+        const sourceLabel = 'Municipalidad de Tigre';
+        const sourceUrl = 'https://www.facebook.com/pg/TigreSalud/'
         return (
             <div>
                 <div className={'last-update'}>
                     <h3>Última actualización: {lastUpdate}</h3>
                 </div>
                 <div>
-                    <SmCasesCards/>
+                    <TigreCasesCards/>
                 </div>
                 <div>
-                    <SmCharts/>
+                    <TigreCharts/>
                 </div>
                 <div>
-                    <SmTestCards/>
+                    <TigreTestCards/>
                 </div>
                 <div>
                     <p className={'source'}><strong>Fuente: </strong><a

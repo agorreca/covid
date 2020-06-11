@@ -4,7 +4,7 @@ import ChartContainer from "./ChartContainer";
 import {VictoryAxis, VictoryChart, VictoryLine, VictoryLabel, VictoryLegend} from "victory";
 
 
-export default class ArChart extends React.Component {
+export default class ArgentinaChart extends React.Component {
 
     constructor(props) {
         super(props);

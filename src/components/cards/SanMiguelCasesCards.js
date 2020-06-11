@@ -1,13 +1,13 @@
 import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
-import {DATA} from '../../data/data'
+import {SanMiguelData} from '../../data/san-miguel-data'
 import CardIndicator from "../shared/card/CardIndicator";
 
-export default class SmCasesCards extends React.Component {
+export default class SanMiguelCasesCards extends React.Component {
 
     constructor(props) {
         super(props);
-        const last = DATA[0];
+        const last = SanMiguelData[0];
         const active = last.cases.total - last.cases.cured - last.cases.dead;
         this.state = {
             total: last.cases.total.toString(),

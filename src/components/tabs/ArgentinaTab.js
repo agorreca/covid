@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "@emotion/styled";
 import {getDataByCountry} from "../../services/covid-service";
-import ArCasesCards from "../cards/ArCasesCards";
-import ArChart from "../charts/ArChart";
+import ArgentinaCasesCards from "../cards/ArgentinaCasesCards";
+import ArgentinaChart from "../charts/ArgentinaChart";
 import {Spinner} from "react-bootstrap";
 
 const FIRST_DAY = '2020-03-03T00:00:00Z';
 const COUNTRY = 'argentina';
 
-export default class ArTab extends React.Component {
+export default class ArgentinaTab extends React.Component {
 
     constructor(props) {
         super(props);
@@ -52,8 +52,8 @@ export default class ArTab extends React.Component {
                                         <h3>Última
                                             actualización: {this.state.current ? this.state.lastUpdate : ''}</h3>
                                     </div>
-                                    <ArCasesCards current={this.state.current} previous={this.state.previous}/>
-                                    <ArChart data={this.state.data}/>
+                                    <ArgentinaCasesCards current={this.state.current} previous={this.state.previous}/>
+                                    <ArgentinaChart data={this.state.data}/>
                                 </div>
                             )
                         }

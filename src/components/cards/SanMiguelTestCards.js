@@ -1,16 +1,16 @@
 import React from "react";
 import '../test-section/TestSection.scss';
 import {Col, Container, Row} from "react-bootstrap";
-import {DATA} from "../../data/data";
+import {SanMiguelData} from "../../data/san-miguel-data";
 import CardIndicator from "../shared/card/CardIndicator";
 
-export default class SmTestCards extends React.Component {
+export default class SanMiguelTestCards extends React.Component {
 
     constructor(props) {
         super(props);
         const population = 300000;
-        const last = DATA[0];
-        const yesterday = DATA[1];
+        const last = SanMiguelData[0];
+        const yesterday = SanMiguelData[1];
         this.state = {
             total: last.dismiss + last.cases.total,
             study: last.inStudy,

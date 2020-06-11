@@ -1,15 +1,15 @@
 import React from "react";
 import {VictoryBar, VictoryChart, VictoryLabel, VictoryAxis} from "victory";
-import {DATA} from "../../data/data";
+import {SanMiguelData} from "../../data/san-miguel-data";
 import {Lethality} from "../../data/extra-data";
 import ChartContainer from "./ChartContainer";
 
-export default class SmLethalityChart extends React.Component {
+export default class SanMiguelLethalityChart extends React.Component {
 
     constructor(props) {
         super(props);
 
-        const last = DATA[0];
+        const last = SanMiguelData[0];
         this.state = {
             data: [
                 {x: 0, y: 7},

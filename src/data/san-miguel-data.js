@@ -1,4 +1,4 @@
-export const DATA = [
+export const SanMiguelData = [
     {
         date: '2020-06-09T23:59:59',
         cases: {
